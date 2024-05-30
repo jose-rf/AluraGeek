@@ -11,4 +11,4 @@ Este é o projeto Alura Geek, desenvolvido como parte do curso Oracle Next Educa
 
 ---
 
-Este README fornece uma visão geral simplificada do projeto Alura Geek, incluindo suas funcionalidades principais. Você pode adicionar mais detalhes conforme necessário.
+
