@@ -163,6 +163,62 @@ footer{
     align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+
+    header{
+        font-size: 1.5rem;
+    }
+
+    header img{
+        width: 5rem;
+    }
+
+    body{
+        background-color: var(--cor-primaria);
+    }
+
+    main{
+        gap: 0rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0rem;
+        align-items: center;
+    }
+
+    .scrollable-section {
+        order: 2;
+        width: 90%;
+        max-width: 50rem;
+        position: relative; 
+    }
+
+    .scrollable-section h1 {
+        color: var(--cor--padrao);
+        position: sticky;
+        position: sticky;
+        top: 0; 
+        left: 0; 
+        transform: translateY(0); 
+        z-index: 1;
+    }
+
+    .rodape--dados h1{
+        font-size: 1.5rem;
+    }
+
+    .rodape--dados img{
+        width: 5rem;
+    }
+
+    footer p{
+        font-size: 0.7rem;
+    }
+
+    .formulario{
+        order: 1;
+    }
+}
+
 
 
 
