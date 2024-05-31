@@ -2,23 +2,85 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>AluraGeek</title>
 </head>
 <body>
-    
     <header>
         <img src="/img/image 1.svg" alt="">
         <p class="titulo">AluraGeek</p>
     </header>
 
     <main>
-            <section class="scrollable-section">
-                <h1>Meus Produtos</h1>
-            </section>
+        <section class="scrollable-section">
+            <h1>Meus Produtos</h1>
+            <div class="container">
+                <div class="card">
+                    <img src="/img/cardImage1.svg" class="card--img" alt="Imagem do produto">
+                    <div class="card-container--info">
+                        <p>Stormtrooper</p>
+                        <div class="card-container--value">
+                            <p>Preço: R$60.00</p>
+                            <img src="/img/iconeDeEliminação.svg" alt="Ícone de Eliminação">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/img/cardImage2.svg" class="card--img" alt="Imagem do produto">
+                    <div class="card-container--info">
+                        <p>Game Boy Classic</p>
+                        <div class="card-container--value">
+                            <p>Preço: R$60.00</p>
+                            <img src="/img/iconeDeEliminação.svg" alt="Ícone de Eliminação">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/img/cardImage3.svg"  class="card--img" alt="Imagem do produto">
+                    <div class="card-container--info">
+                        <p>Super Nintendo</p>
+                        <div class="card-container--value">
+                            <p>Preço: R$60.00</p>
+                            <img src="/img/iconeDeEliminação.svg" alt="Ícone de Eliminação">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="form--section">
+         <h1>Adicionar Produto</h1>
+         <div class="formulario">
+            
+            <input type="text" name="Nome" id="Nome" placeholder="Nome" required>
+        
+            <input type="number" name="Valor" id="Valor" placeholder="Valor" required>
+            
+            <input type="text" name="Imagem" id="Imagem" placeholder="URL da Imagem">
+            
+            <button type="guardar">Guardar</button>
+            <button type="limpar">Limpar</button>
+        </div>
+    </section>
+
     </main>
 
+
+    <footer>
+        
+        <div class="rodape--dados">
+        <img src="/img/image 1.svg" alt="">
+        <h1>AluraGeek</h1>
+        </div>
+         <p>Desenvolvido Por José Rodrigues</p>
+        <p>Alura Latam - 2024</p>
+        
+    </footer>
+
+    
 
 
 
