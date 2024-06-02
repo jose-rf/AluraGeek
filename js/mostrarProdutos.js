@@ -1,4 +1,5 @@
 import { conectaApi } from "./requisições.js";
+import { adicionarEventoExclusao }  from "./apagar.js";
 
 const formulario = document.querySelector("[data-formulario]");
 
@@ -33,7 +34,6 @@ async function listaProduto() {
         const listaApi = await conectaApi.listaDeProdutos();
         console.log("Produtos recebidos:", listaApi); 
         const aviso = document.querySelector('.aviso');
-
       
         const lista = document.querySelector(".container[data-lista]");
         lista.innerHTML = '';
@@ -43,7 +43,7 @@ async function listaProduto() {
         } else {
             aviso.style.display = 'none';
             listaApi.forEach(elemento => {
-                lista.appendChild(constroiCard(elemento.nome, elemento.preco, elemento.imagem));
+                lista.appendChild(constroiCard(elemento.nome, elemento.preco, elemento.imagem, elemento.id));
             });
         }
     } catch (erro) {
@@ -51,19 +51,27 @@ async function listaProduto() {
     }
 }
 
-function constroiCard(nome, preco, imagem) {
-    const card = document.createElement('div');
+function constroiCard(nome, preco, imagem, id) {
+    const card = document.createElement('div');    
     card.classList.add('card');
-
+    card.setAttribute('data-id', id);
     card.innerHTML = `
         <img src="${imagem}" class="card--img" alt="Imagem ${nome}">
         <div class="card-container--info">
             <p>${nome}</p>
             <div class="card-container--value">
                 <p>Preço: ${preco}</p>
-                <img src="/img/iconeDeEliminação.svg" alt="Ícone de Eliminação">
+                <img src="/img/iconeDeEliminação.svg" alt="Ícone de Eliminação" data-delete>
             </div>
-        </div>`;
+        </div>`
+
+        const apagar = card.querySelector('[data-delete]');
+        apagar.addEventListener('click', async(event) => {
+            event.preventDefault();
+
+            card.remove();
+            await adicionarEventoExclusao(id);
+        });
 
     return card;
 }

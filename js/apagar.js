@@ -1,12 +1,11 @@
-
-export function adicionarEventoExclusao() {
-    var deleteIcon = document.querySelector('img[alt="Ícone de Eliminação"]');
-    
-    
-    deleteIcon.addEventListener('click', function() {
-      
-      var divToDelete = deleteIcon.parentNode;
-      divToDelete.remove();
-    });
+export async function adicionarEventoExclusao(id) {
+  const conexao = await fetch(`http://localhost:3000/produtos/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
   }
-  
+  });
+
+  return conexao;
+
+}

@@ -28,6 +28,7 @@ async function criaProduto(nome, preco, imagem){
     });
 
     const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
 
 }
 
