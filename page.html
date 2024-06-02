@@ -14,43 +14,31 @@
 
     <main>
         <section class="scrollable-section" data-lista>
-                <h1>Meus Produtos</h1>
-                <p class="aviso">Nenhum produto adicionado!</p>
-            <div class="container">
-              </div>
-          </section>
+            <h1>Meus Produtos</h1>
+            <p class="aviso">Nenhum produto adicionado!</p>
+            <div class="container" data-lista></div>
+        </section>
 
-    <section class="form--section">
-         <h1>Adicionar Produto</h1>
-         <div class="formulario">
-            
-            <input type="text" name="Nome" id="Nome" placeholder="Nome" required>
-        
-            <input type="number" name="Valor" id="Valor" placeholder="Valor" required>
-            
-            <input type="text" name="Imagem" id="Imagem" placeholder="URL da Imagem">
-            
-            <button type="guardar">Guardar</button>
-            <button type="limpar">Limpar</button>
-        </div>
-    </section>
-
+        <section class="form--section">
+            <h1>Adicionar Produto</h1>
+            <form class="formulario" data-formulario>
+                <input type="text" name="Nome" id="Nome" placeholder="Nome" required data-nome>
+                <input type="number" name="Valor" id="Valor" placeholder="Valor" required data-valor>
+                <input type="text" name="Imagem" id="Imagem" placeholder="URL da Imagem" required data-imagem>
+                <button type="submit">Guardar</button>
+                <button type="button" data-limpar>Limpar</button>
+            </form>
+        </section>
     </main>
 
-
     <footer>
-        
         <div class="rodape--dados">
-        <img src="/img/image 1.svg" alt="">
-        <h1>AluraGeek</h1>
+            <img src="/img/image 1.svg" alt="">
+            <h1>AluraGeek</h1>
         </div>
-         <p>Desenvolvido Por José Rodrigues</p>
+        <p>Desenvolvido Por José Rodrigues</p>
         <p>Alura Latam - 2024</p>
-        
     </footer>
-
-    
-
 
     <script src="/js/mostrarProdutos.js" type="module"></script>
 </body>

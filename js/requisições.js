@@ -7,14 +7,10 @@ export async function listaDeProdutos() {
 
 async function criaProduto(nome, preco, imagem){
 
-       // Função para formatar o preço
-       function formatarPreco(preco) {
-        if (Number.isInteger(preco)) {
-            // Se for inteiro, adiciona ".00"
-            return preco.toFixed(2);
-        }
-        // Se for decimal, retorna o preço como string
-        return preco.toString();
+    
+    function formatarPreco(preco) {
+        
+        return parseFloat(preco).toFixed(2);
     }
 
     const precoFormatado = formatarPreco(preco);
@@ -25,9 +21,9 @@ async function criaProduto(nome, preco, imagem){
             "Content-type": "application/json"
         },
         body: JSON.stringify({
-            nome : nome,
-            pereco : `R$${preco}`,
-            imagem : imagem
+            nome: nome,
+            preco: `R$${precoFormatado}`,
+            imagem: imagem
         })
     });
 
@@ -39,5 +35,3 @@ export const conectaApi = {
     listaDeProdutos,
     criaProduto
 }
-
-
