@@ -1,16 +1,12 @@
 {
-  "name": "alurageek",
+  "name": "meu-servidor-json",
   "version": "1.0.0",
-  "description": "Este é o projeto Alura Geek, desenvolvido como parte do curso Oracle Next Education da Alura em parceria com a Oracle. Trata-se de uma loja online onde os usuários podem adicionar produtos ao carrinho e finalizar compras.",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "json-server": "^1.0.0-beta.0"
+    "json-server": "^0.17.0"
   }
 }
